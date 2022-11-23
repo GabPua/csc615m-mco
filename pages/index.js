@@ -115,10 +115,12 @@ export default function Home() {
       </Head>
 
       <main>
-        <section className="max-w-5xl mx-auto my-8 px-4">
-          <h1 className="text-3xl text-center font-bold mb-4">Machine Simulator</h1>
+        <section className="max-w-5xl mx-auto mt-8 mb-4 px-4">
+          <h1 className="text-3xl text-center font-bold">Machine Simulator</h1>
+        </section>
+        <section className="lg:ml-[10vw] mb-8 px-4">
           <p>The steps to use the machine simulator are as follows:</p>
-          <ol className="list-decimal list-inside">
+          <ol className="list-decimal list-inside indent-4">
             <li>Select the machine type from the control menu.</li>
             <li>Write a program for the selected machine type in the program area. See <a href="#syntax"></a>below for syntax and the assumptions made regarding the program.</li>
             <li>Place the input to the machine in the control menu.</li>
@@ -164,9 +166,9 @@ export default function Home() {
             </div>
           </form>
         </section>
-        <section className="max-w-5xl mx-auto mt-8 mb-16 px-4" id="syntax">
+        <section className="lg:ml-[10vw] mt-8 mb-16 px-4" id="syntax">
           <p>Syntax:</p>
-          <ol className="list-decimal list-inside">
+          <ol className="list-decimal list-inside indent-4">
             <li>
               <span>Two-Way Accepter</span>
               <ul>
@@ -201,8 +203,9 @@ export default function Home() {
               </ul>
             </li>
           </ol>
+          <br></br>
           <p>Assumptions:</p>
-          <ul>
+          <ul className="list-disc list-inside indent-4">
             <li>The program is syntactically correct upon clicking on &apos;Initialize&apos;.</li>
             <li>An accepting or rejecting state cannot have another state type.</li>
             <li>Accepting and rejecting states are halting states i.e. reaching these state would halt the maching.</li>
