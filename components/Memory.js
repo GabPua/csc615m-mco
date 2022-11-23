@@ -8,8 +8,8 @@ export function Memory({ type, data }) {
 				<table className="w-full border border-gray-600 max-w-[300px] mx-auto bg-white">
 					<tbody>
 						{
-							data.map(d => (
-								<tr>
+							data.map((d, i) => (
+								<tr key={i}>
 									<td className="border border-gray-600 px-1 w-24">
 										<p>{d.name}</p>
 									</td>

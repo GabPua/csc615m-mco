@@ -16,7 +16,7 @@ export function Controls({ disabled1, disabled2, branchLength, onBranchChange, o
 			<div>
 				<label htmlFor="branch">Branch</label>
 				<select name="branchIndex" id="branch" disabled={disabled2} onChange={onBranchChange}>
-					{Array.from({ length: branchLength }).map((_, i) => <option value={i}>Branch {i + 1}</option>)}
+					{Array.from({ length: branchLength }).map((_, i) => <option key={i} value={i}>Branch {i + 1}</option>)}
 				</select>
 			</div>
 			<div>

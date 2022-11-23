@@ -122,9 +122,9 @@ export default function Home() {
             <li>Select the machine type from the control menu.</li>
             <li>Write a program for the selected machine type in the program area. See <a href="#syntax"></a>below for syntax and the assumptions made regarding the program.</li>
             <li>Place the input to the machine in the control menu.</li>
-            <li>Click on 'Initialize' to initialize the configuration of the machine.</li>
-            <li>Click on 'Run' to run the machine until it halts and provides either an 'accept' or 'reject' result. Click on 'Step' to run only a single step of the machine. In the case of a nondeterministic machine, you can select different branches from the control menu at different stages of the machine's run.</li>
-            <li>Click on 'Reset' to clear the configuration of the machine. The 'Initialize' button must be clicked again before the machine can be run again.</li>
+            <li>Click on &apos;Initialize&apos; to initialize the configuration of the machine.</li>
+            <li>Click on &apos;Run&apos; to run the machine until it halts and provides either an &apos;accept&apos; or &apos;reject&apos; result. Click on &apos;Step&apos; to run only a single step of the machine. In the case of a nondeterministic machine, you can select different branches from the control menu at different stages of the machine&apos;s run.</li>
+            <li>Click on &apos;Reset&apos; to clear the configuration of the machine. The &apos;Initialize&apos; button must be clicked again before the machine can be run again.</li>
           </ol>
         </section>
         <section className="space-y-8 px-4 bg-orange-200 py-4">
@@ -170,40 +170,40 @@ export default function Home() {
             <li>
               <span>Two-Way Accepter</span>
               <ul>
-                <li>A line can be of the form '<code>&#60;current state&#62;&#93;&#60;state type&#62;&#40;&#60;tape symbol&#62;,&#60;next state&#62;&#41;</code>' where the state types are '<code>L</code>' for left or '<code>R</code>' for right.</li>
-                <li>A line can be of the form '<code>&#60;current state&#62;&#93;&#60;state type&#62;</code>' where the state types are '<code>accept</code>' or '<code>reject</code>'.</li>
-                <li>Initial states are identified using a line of the form '<code>&#60;current state&#62;&#93;initial</code>'.</li>
+                <li>A line can be of the form &apos;<code>&#60;current state&#62;&#93;&#60;state type&#62;&#40;&#60;tape symbol&#62;,&#60;next state&#62;&#41;</code>&apos; where the state types are &apos;<code>L</code>&apos; for left or &apos;<code>R</code>&apos; for right.</li>
+                <li>A line can be of the form &apos;<code>&#60;current state&#62;&#93;&#60;state type&#62;</code>&apos; where the state types are &apos;<code>accept</code>&apos; or &apos;<code>reject</code>&apos;.</li>
+                <li>Initial states are identified using a line of the form &apos;<code>&#60;current state&#62;&#93;initial</code>&apos;.</li>
               </ul>
             </li>
             <li>
               <span>Two-Way Free Stack/Tape, Multi-Queue Variant</span>
               <ul>
-                <li>A line can be of the form '<code>&#60;current state&#62;&#93;&#60;state type&#62;&#40;&#60;tape symbol&#62;,&#60;next state&#62;&#41;</code>' where the state types are '<code>SL</code>' for scan left or '<code>SR</code>' for scan right.</li>
-                <li>A line can be of the form '<code>&#60;current state&#62;&#93;&#60;state type&#62;&#40;&#60;queue&#62;,&#60;tape symbol&#62;,&#60;next state&#62;&#41;</code>' where the state types are '<code>R</code>' for reading/dequeuing or '<code>W</code>' for writing/enqueuing.</li>
-                <li>Accepting states are identified using a line of the form '<code>&#60;current state&#62;&#93;accept</code>'.</li>
-                <li>Initial states are identified by including a line of the form '<code>&#60;current state&#62;&#93;initial</code>'.</li>
+                <li>A line can be of the form &apos;<code>&#60;current state&#62;&#93;&#60;state type&#62;&#40;&#60;tape symbol&#62;,&#60;next state&#62;&#41;</code>&apos; where the state types are &apos;<code>SL</code>&apos; for scan left or &apos;<code>SR</code>&apos; for scan right.</li>
+                <li>A line can be of the form &apos;<code>&#60;current state&#62;&#93;&#60;state type&#62;&#40;&#60;queue&#62;,&#60;tape symbol&#62;,&#60;next state&#62;&#41;</code>&apos; where the state types are &apos;<code>R</code>&apos; for reading/dequeuing or &apos;<code>W</code>&apos; for writing/enqueuing.</li>
+                <li>Accepting states are identified using a line of the form &apos;<code>&#60;current state&#62;&#93;accept</code>&apos;.</li>
+                <li>Initial states are identified by including a line of the form &apos;<code>&#60;current state&#62;&#93;initial</code>&apos;.</li>
               </ul>
             </li>
             <li>
               <span>One-Way, Free Stack/Tape, Two-stack Variant</span>
               <ul>
-                <li>A line can be of the form '<code>&#60;current state&#62;&#93;&#60;state type&#62;&#40;&#60;tape/stack symbol&#62;,&#60;next state&#62;&#41;</code>' where the state types are '<code>S</code>' for scan, '<code>R1</code>' for reading/popping from the first stack, '<code>W1</code>' for writing/pushing to the first stack, '<code>R2</code>' for reading/popping from the second stack, or '<code>W2</code>' for writing/pushing to the second stack.</li>
-                <li>Accepting states are identified using a line of the form '<code>&#60;current state&#62;&#93;accept</code>'.</li>
-                <li>Initial states are identified by including a line of the form '<code>&#60;current state&#62;&#93;initial</code>'.</li>
+                <li>A line can be of the form &apos;<code>&#60;current state&#62;&#93;&#60;state type&#62;&#40;&#60;tape/stack symbol&#62;,&#60;next state&#62;&#41;</code>&apos; where the state types are &apos;<code>S</code>&apos; for scan, &apos;<code>R1</code>&apos; for reading/popping from the first stack, &apos;<code>W1</code>&apos; for writing/pushing to the first stack, &apos;<code>R2</code>&apos; for reading/popping from the second stack, or &apos;<code>W2</code>&apos; for writing/pushing to the second stack.</li>
+                <li>Accepting states are identified using a line of the form &apos;<code>&#60;current state&#62;&#93;accept</code>&apos;.</li>
+                <li>Initial states are identified by including a line of the form &apos;<code>&#60;current state&#62;&#93;initial</code>&apos;.</li>
               </ul>
             </li>
             <li>
               <span>Two-Way, Counter, Single Tape Variant</span>
               <ul>
-                <li>A line can be of the form '<code>&#60;current state&#62;&#93;&#60;state type&#62;&#40;&#60;input tape symbol&#62;,&#60;output tape symbol&#62;,&#60;next state&#62;&#41;</code>' where the state types are '<code>L</code>' for left or '<code>R</code>' for right.</li>
-                <li>A line can be of the form '<code>&#60;current state&#62;&#93;&#60;state type&#62;</code>' where the state types are '<code>accept</code>' or '<code>reject</code>'.</li>
-                <li>Initial states are identified using a line of the form '<code>&#60;current state&#62;&#93;initial</code>'.</li>
+                <li>A line can be of the form &apos;<code>&#60;current state&#62;&#93;&#60;state type&#62;&#40;&#60;input tape symbol&#62;,&#60;output tape symbol&#62;,&#60;next state&#62;&#41;</code>&apos; where the state types are &apos;<code>L</code>&apos; for left or &apos;<code>R</code>&apos; for right.</li>
+                <li>A line can be of the form &apos;<code>&#60;current state&#62;&#93;&#60;state type&#62;</code>&apos; where the state types are &apos;<code>accept</code>&apos; or &apos;<code>reject</code>&apos;.</li>
+                <li>Initial states are identified using a line of the form &apos;<code>&#60;current state&#62;&#93;initial</code>&apos;.</li>
               </ul>
             </li>
           </ol>
           <p>Assumptions:</p>
           <ul>
-            <li>The program is syntactically correct upon clicking on 'Initialize'.</li>
+            <li>The program is syntactically correct upon clicking on &apos;Initialize&apos;.</li>
             <li>An accepting or rejecting state cannot have another state type.</li>
             <li>Accepting and rejecting states are halting states i.e. reaching these state would halt the maching.</li>
           </ul>
