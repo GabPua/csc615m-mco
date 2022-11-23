@@ -1,0 +1,42 @@
+functions:
+- parser(lines) -> states
+- run(branches) -> updated branches, result
+
+data:
+- states - map(string, state)
+  - state:
+    - type - string //change for multi - (string]string) - (type]queue)
+    - transitions - map(char, list(string)) 
+                    //change for TM - map(char, list(char]string)) - map(input, list(output]next))
+    - initial - bool
+- branches - list(branch)
+  - branch:
+    - current state - string
+    - tape - string
+    - tape head/pointer - int
+    - 2 stacks/map(string, queue)
+
+SET 13 (Gabriel Pua):
+    1. Deterministic, Two-Way, Free Stack/Tape, Multi-Queue
+    2. Nondeterministic, Two-Way, Free Stack/Tape, Multi-Queue
+       state]SL/SR(char,state)
+       state]R/W(string,char,state)
+       state]accept/initial
+    3. Deterministic, One-Way, Free Stack/Tape, Two-Stack
+    4. Nondeterministic, One-Way, Free Stack/Tape, Two-Stack
+       state]S/R1/R2/W1/W2(char,state)
+       state]accept/initial
+    5. Deterministic, Two-Way, Counter, Single Tape
+    6. Nondeterministic, Two-Way, Counter, Single Tape
+       state]L/R(char,char,state)
+       state]accept/reject/initial
+   TWA
+       state]L/R(char,state)
+       state]accept/reject/initial
+
+assumptions:
+- accept/reject is another type of state
+- accept/reject are halting states
+- multi-queue and two-stack have no reject states
+
+sample: https://morphett.info/turing/turing.html

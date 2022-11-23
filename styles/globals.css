@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.has-caret {
+  @apply relative;
+}
+
+.has-caret::after {
+  @apply content-['Head'] absolute -bottom-7 text-xs left-1/2 -translate-x-1/2 bg-green-100 px-1 py-[1px];
+}
+
+.has-caret::before {
+  @apply content-['_'] absolute -bottom-3 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[18px] border-r-[18px] border-transparent border-b-green-100 border-b-[13px];
+}
+
+label, input, select {
+  @apply block w-full;
+}
+
+input, select {
+  @apply px-1 py-1;
+}
+
+input, select, textarea {
+  @apply disabled:bg-gray-200 disabled:cursor-not-allowed;
+}
+
+button {
+  @apply bg-blue-300 rounded py-1 hover:bg-blue-400 active:bg-blue-500 transition-colors;
+}
+
+button:disabled {
+  @apply opacity-50 bg-blue-300 cursor-not-allowed;
+}
+
+ol ul {
+  @apply list-disc list-inside ml-4;
+}
