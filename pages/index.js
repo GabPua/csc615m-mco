@@ -147,11 +147,13 @@ export default function Home() {
                   <Memory type="Stacks" data={[
                     { 
                       name: 'Stack 1',
-                      data: branches.length > branchIndex ? branches[branchIndex].stacks[0].toString() : ''
+                      data: branches.length > branchIndex && branches[branchIndex].stacks ?
+                        branches[branchIndex].stacks[0].toString() : ''
                     },
                     { 
                       name: 'Stack 2',
-                      data: branches.length > branchIndex ? branches[branchIndex].stacks[1].toString() : ''
+                      data: branches.length > branchIndex && branches[branchIndex].stacks ?
+                        branches[branchIndex].stacks[1].toString() : ''
                     }
                   ]} />
                   :
