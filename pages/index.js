@@ -98,11 +98,15 @@ export default function Home() {
 
   function getQueues() {
     if (branches.length > branchIndex) {
-      let data = []
-      for (let [name, queue] of branches[branchIndex].queues) {
-        data.push({ name: 'Queue ' + name, data: queue.getString() })
+      if (branches[branchIndex].queues) {
+        let data = []
+        for (let [name, queue] of branches[branchIndex].queues) {
+          data.push({ name: 'Queue ' + name, data: queue.getString() })
+        }
+        return data
+      } else {
+        return [{ name: 'Queue 1', data: '' }]
       }
-      return data
     } else {
       return [{ name: 'Queue 1', data: '' }]
     }
