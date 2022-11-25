@@ -50,7 +50,7 @@ export default function Home() {
       }
 
       setBranches(res.branches)
-      setBranchIndex(branches.length > branchIndex ? branchIndex : 0)
+      setBranchIndex(branches.length >= branchIndex ? branchIndex : 0)
       setResult(res.result)
 
       if (res.result !== '-') {
@@ -101,7 +101,7 @@ export default function Home() {
       if (branches[branchIndex].queues) {
         let data = []
         for (let [name, queue] of branches[branchIndex].queues) {
-          data.push({ name: 'Queue ' + name, data: queue.getString() })
+          data.push({ name: 'Queue ' + name, data: queue.to_string() })
         }
         return data
       } else {
@@ -148,12 +148,12 @@ export default function Home() {
                     { 
                       name: 'Stack 1',
                       data: branches.length > branchIndex && branches[branchIndex].stacks ?
-                        branches[branchIndex].stacks[0].toString() : ''
+                        branches[branchIndex].stacks[0].to_string() : ''
                     },
                     { 
                       name: 'Stack 2',
                       data: branches.length > branchIndex && branches[branchIndex].stacks ?
-                        branches[branchIndex].stacks[1].toString() : ''
+                        branches[branchIndex].stacks[1].to_string() : ''
                     }
                   ]} />
                   :
