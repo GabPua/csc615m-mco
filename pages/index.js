@@ -50,7 +50,7 @@ export default function Home() {
       }
 
       setBranches(res.branches)
-      setBranchIndex(branches.length > branchIndex ? branchIndex : 0)
+      setBranchIndex(res.branches.length > branchIndex ? branchIndex : 0)
       setResult(res.result)
 
       if (res.result !== '-') {
@@ -70,7 +70,7 @@ export default function Home() {
       }
 
       setBranches(res.branches)
-      setBranchIndex(branches.length > branchIndex ? branchIndex : 0)
+      setBranchIndex(res.branches.length > branchIndex ? branchIndex : 0)
       setResult(res.result)
 
       setIsDisabled1(false)
