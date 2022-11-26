@@ -105,10 +105,10 @@ export default function Home() {
         }
         return data
       } else {
-        return [{ name: 'Queue 1', data: '' }]
+        return []
       }
     } else {
-      return [{ name: 'Queue 1', data: '' }]
+      return []
     }
   }
 
