@@ -50,7 +50,7 @@ export default function Home() {
       }
 
       setBranches(res.branches)
-      setBranchIndex(branches.length >= branchIndex ? branchIndex : 0)
+      setBranchIndex(branches.length > branchIndex ? branchIndex : 0)
       setResult(res.result)
 
       if (res.result !== '-') {
