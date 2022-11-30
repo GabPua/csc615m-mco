@@ -204,6 +204,7 @@ export default function Home() {
               <span>Two-Way, Counter, Single Tape Variant</span>
               <ul>
                 <li>A line can be of the form &apos;<code>&#60;current state&#62;&#93;&#60;state type&#62;&#40;&#60;input tape symbol&#62;,&#60;output tape symbol&#62;,&#60;next state&#62;&#41;</code>&apos; where the state types are &apos;<code>L</code>&apos; for left or &apos;<code>R</code>&apos; for right.</li>
+                <li>A line cna be of the form &apos;<code>&#60;current state&#62;&#93;&#60;state type&#62;&#40;&#60;input tape symbol&#62;,&#60;next state&#62;&#41;</code>&apos; where the state types are &apos;<code>L</code>&apos; for left or &apos;<code>R</code>&apos; for right if there is no output tape symbol i.e. only scanning is performed.</li>
                 <li>A line can be of the form &apos;<code>&#60;current state&#62;&#93;&#60;state type&#62;</code>&apos; where the state types are &apos;<code>accept</code>&apos; or &apos;<code>reject</code>&apos;.</li>
                 <li>Initial states are identified using a line of the form &apos;<code>&#60;current state&#62;&#93;initial</code>&apos;.</li>
               </ul>
